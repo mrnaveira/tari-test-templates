@@ -8,7 +8,7 @@ use tari_template_test_tooling::SubstateType;
 use tari_template_test_tooling::TemplateTest;
 use tari_transaction::Transaction;
 
-use tari_engine_types::virtual_substate::{VirtualSubstate, VirtualSubstateAddress};
+use tari_engine_types::virtual_substate::{VirtualSubstate, VirtualSubstateId};
 
 use tari_template_lib::constants::XTR2;
 
@@ -781,7 +781,7 @@ fn bid(test: &mut TemplateTest, req: &BidRequest) {
 
 fn set_epoch(test: &mut TemplateTest, new_epoch: u64) {
     test.set_virtual_substate(
-        VirtualSubstateAddress::CurrentEpoch,
+        VirtualSubstateId::CurrentEpoch,
         VirtualSubstate::CurrentEpoch(new_epoch),
     );
 }
