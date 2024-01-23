@@ -599,7 +599,7 @@ struct TestSetup {
 }
 
 fn setup() -> TestSetup {
-    let mut test = TemplateTest::new(["./templates/index", "./templates/auction"]);
+    let mut test = TemplateTest::new(["./templates/index", "./templates/auction"], Some("../coverage".into()));
     let auction_index_template = test.get_template_address("AuctionIndex");
     let auction_template = test.get_template_address("Auction");
 
