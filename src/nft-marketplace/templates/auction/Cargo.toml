@@ -8,6 +8,7 @@ edition = "2021"
 #tari_template_lib = { git = "https://github.com/tari-project/tari-dan.git", branch = "development" }
 tari_template_lib = { path = "../../../../../tari-dan/dan_layer/template_lib" }
 serde = { version = "1.0", default-features = false, features = ["derive", "alloc"] }
+minicov = { version = "0.3.3", optional = true }
 
 [profile.release]
 opt-level = 's'     # Optimize for size.
@@ -20,4 +21,4 @@ strip = "debuginfo" # Strip debug info.
 crate-type = ["cdylib", "lib"]
 
 [features]
-coverage = []
+coverage = ["minicov"]

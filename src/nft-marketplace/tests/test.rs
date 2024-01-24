@@ -12,6 +12,7 @@ use tari_engine_types::virtual_substate::{VirtualSubstate, VirtualSubstateId};
 
 use tari_template_lib::constants::XTR2;
 
+
 #[test]
 fn auction_period_ends_with_winning_bid() {
     let TestSetup {
@@ -599,7 +600,7 @@ struct TestSetup {
 }
 
 fn setup() -> TestSetup {
-    let mut test = TemplateTest::new(["./templates/index", "./templates/auction"], Some("../coverage".into()));
+    let mut test = TemplateTest::new(["./templates/index", "./templates/auction"], Some("./coverage".into()));
     let auction_index_template = test.get_template_address("AuctionIndex");
     let auction_template = test.get_template_address("Auction");
 
